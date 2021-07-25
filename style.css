@@ -1,0 +1,131 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'poppins' ,sans-serf;
+}
+body{
+    height:100vh;
+    width:100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#2196f3,#e91e63);
+
+}
+.bubbles{
+    position:absolute;
+    bottom: 100px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%
+
+}
+.bubbles span{
+    height:60px;
+    width:60px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    box-shadow:0 20px 50px rgba(0,0,0,0.15);
+    backdrop-filter:blur(5px);
+    animation: move 10s linear infinite;
+    position: relative;
+    overflow: hidden;
+}
+@keyframes move{
+    100%{
+        transform:translateY(-90vh);
+    }
+}
+.bubbles span.one{
+    animation-delay: 2s;
+    transform: scale(1);
+}.bubbles span.two{
+    animation-delay: 1.9s;
+    transform: scale(1.2);
+}.bubbles span.three{
+    animation-delay: 0.2s;
+    transform: scale(0.35);
+}.bubbles span.four{
+    animation-delay:6s;
+    transform: scale(2.15);
+}.bubbles span.five{
+    animation-delay: 7s;
+    transform: scale(o.5);
+}.bubbles span.six{
+    animation-delay:4s;
+    transform: scale(2.5);
+}.bubbles span.seven{
+    animation-delay:3s;
+    transform: scale(1.5);
+}
+.bubbles span:before{
+    content:'';
+    position: absolute;
+    left:0;
+    top:0;
+    height:60px;
+    width:40%;
+    transform: skew(45deg) translateX(150px);
+    background: rgba(255,255,255,0.1);
+    animation: mirror 3s linear infinite;
+}
+@keyframes mirror{
+    100%{
+        transform: translateX(-450px);
+    }
+}
+.bubbles span.one:before{
+    animation-delay: 1.32s;
+}.bubbles span.two:before{
+    animation-delay: 1.9s;
+}.bubbles span.three:before{
+    animation-delay: 0.2s;
+}.bubbles span.four:before{
+    animation-delay: 2s;
+}.bubbles span.five:before{
+    animation-delay:0.5s ;
+}.bubbles span.six:before{
+    animation-delay: 1.3s;
+}.bubbles span.seven:before{
+    animation-delay: 1s;
+}
+.container{
+    width:360px;
+    padding: 15px;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+    background: rgba(255,255,255,0.1);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255,255,255,0.5);
+}
+.container input[type="text"]{
+    width:100%;
+    height:100px;
+    margin:0 3px;
+    outline:none;
+    border:none;
+    color:#fff;
+    font-size:30px;
+    text-align: right;
+    padding-right: 10px;
+    background: transparent;
+}
+.container input[type="button"]{
+     height: 70px;
+    color: #fff;
+    width: calc(100% / 4 - 5px);
+    background: transparent;
+    /* border-radius: 12px; */
+    margin-top: 15px;
+    outline: none;
+    border:none;
+    cursor:pointer;
+    transition:all 0.3s ease;
+    box-shadow: inset 2px 2px 5px #034479, inset -5px -5px 10px #ec5084;
+}
+.container input[type="button"]:hover{
+    background:rgba(255,255,255,0.1);
+}
